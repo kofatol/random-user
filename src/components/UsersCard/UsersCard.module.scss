@@ -1,4 +1,36 @@
 .UsersCard {
+  &__header {
+  }
+
+  &__body {
+  }
 }
 
-.Header{}
+.Header {
+  &__title {
+  }
+
+  &__subtitle {
+  }
+
+  &__searchbar {
+  }
+}
+
+.CardBody {
+  &__usersList {
+  }
+}
+
+.UsersList {
+  &__userInfo {
+  }
+}
+
+.UserInfo {
+  &__header {
+  }
+
+  &__text {
+  }
+}
