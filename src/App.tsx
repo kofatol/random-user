@@ -1,12 +1,9 @@
-import React from 'react';
+import React from "react";
 import "./styles/index.scss";
+import UsersCard from "./components/UsersCard";
 
-function App() {
-  return (
-    <div className="App">
-      Hello world!
-    </div>
-  );
-}
+const App: React.FC = () => {
+  return <UsersCard />;
+};
 
 export default App;
