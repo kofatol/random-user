@@ -5,7 +5,7 @@ const UsersCard: React.FC = () => {
   return (
     <div className={CSS.UsersCard}>
       <header className={classNames(CSS.UsersCard__header, CSS.Header)}>
-        <h4 className={CSS.Header__title}>Random User Filter</h4>
+        <h2 className={CSS.Header__title}>Random User Filter</h2>
         <small className={CSS.Header__subtitle}>
           Search by name and/or location
         </small>
@@ -17,37 +17,37 @@ const UsersCard: React.FC = () => {
         />
       </header>
       <div className={classNames(CSS.UsersCard__body, CSS.CardBody)}>
-        <ul
-          id="result"
-          className={classNames(CSS.CardBody__usersList, CSS.UsersList)}
-        >
-          <li>
+        <ul id="result" className={CSS.CardBody__usersList}>
+          <li className={CSS.UserInfo}>
             <img
               src="https://randomuser.me/api/portraits/women/3.jpg"
               alt="Karen"
+              className={CSS.UserInfo__image}
             />
-            <div className={classNames(CSS.UsersList__userInfo, CSS.UserInfo)}>
-              <h4 className={CSS.UserInfo__header}>Karen Smith</h4>
+            <div className={CSS.UserInfo__infoWrap}>
+              <h3 className={CSS.UserInfo__header}>Karen Smith</h3>
               <p className={CSS.UserInfo__text}>London, UK</p>
             </div>
           </li>
-          <li>
+          <li className={CSS.UserInfo}>
             <img
               src="https://randomuser.me/api/portraits/women/3.jpg"
               alt="Karen"
+              className={CSS.UserInfo__image}
             />
-            <div className={classNames(CSS.UsersList__userInfo, CSS.UserInfo)}>
-              <h4 className={CSS.UserInfo__header}>Karen Smith</h4>
+            <div className={CSS.UserInfo__infoWrap}>
+              <h3 className={CSS.UserInfo__header}>Karen Smith</h3>
               <p className={CSS.UserInfo__text}>London, UK</p>
             </div>
           </li>
-          <li>
+          <li className={CSS.UserInfo}>
             <img
               src="https://randomuser.me/api/portraits/women/3.jpg"
               alt="Karen"
+              className={CSS.UserInfo__image}
             />
-            <div className={classNames(CSS.UsersList__userInfo, CSS.UserInfo)}>
-              <h4 className={CSS.UserInfo__header}>Karen Smith</h4>
+            <div className={CSS.UserInfo__infoWrap}>
+              <h3 className={CSS.UserInfo__header}>Karen Smith</h3>
               <p className={CSS.UserInfo__text}>London, UK</p>
             </div>
           </li>

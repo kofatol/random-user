@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   border: 0;
+  font-size: 1rem;
 }
 
 *,
@@ -12,6 +13,30 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: calc(60% + 0.8vmin);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
 nav,
 footer,
 header,
@@ -19,22 +44,11 @@ aside {
   display: block;
 }
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
 input,
 button,
 textarea {
   font-family: inherit;
+  color: inherit;
 }
 
 input::-ms-clear {
@@ -72,4 +86,24 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: 400;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1.1rem;
 }

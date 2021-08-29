@@ -1,4 +1,12 @@
+@import "../../styles/index.scss";
+
 .UsersCard {
+  border-radius: $border-radius;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  // min-width: 300px;
+  max-width: 40rem;
+
   &__header {
   }
 
@@ -7,30 +15,66 @@
 }
 
 .Header {
+  background-color: $green;
+  // background-color: rgb(250, 191, 247);
+  padding: 30px 20px;
+
   &__title {
+    font-weight: 700;
+    margin-bottom: 10px;
   }
 
   &__subtitle {
+    display: inline-block;
+    margin: 5px 0 5px;
+    opacity: 0.8;
   }
 
   &__searchbar {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: $border-radius;
+    font-size: 0.9rem;
+    background-color: $light-green;
   }
 }
 
 .CardBody {
   &__usersList {
-  }
-}
+    background-color: $light-green;
+    min-height: 400px;
+    overflow-y: auto;
 
-.UsersList {
-  &__userInfo {
+    li:not(:last-of-type) {
+      border-bottom: 1px solid $green;
+    }
   }
 }
 
 .UserInfo {
+  display: flex;
+  padding: 20px;
+
+  &__image {
+    border-radius: 20%;
+    object-fit: cover;
+    width: 70px;
+    height: 70px;
+  }
+
+  &__infoWrap {
+    margin-left: 10px;
+  }
+
   &__header {
+    margin: 0 0 10px;
   }
 
   &__text {
+    font-size: 1.1rem;
+  }
+
+  &_hidden {
+    display: none;
   }
 }
