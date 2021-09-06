@@ -3,7 +3,7 @@
 .CardBody {
   &__usersList {
     background-color: $light-green;
-    min-height: 400px;
+    max-height: 600px;
     overflow-y: auto;
 
     li:not(:last-of-type) {
