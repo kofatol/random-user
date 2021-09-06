@@ -10,7 +10,7 @@ const CardBody: React.FC = () => {
         {usersData.map((user) => {
           const id = user.registered.date;
           const avatar = user.picture.medium;
-          const fullName = user.name.first + user.name.last;
+          const fullName = `${user.name.first} ${user.name.last}`;
           const city = user.location.city;
           const country = user.location.country;
 
