@@ -1,4 +1,4 @@
-import { User } from "./CardBody.model";
+import { User } from "../../interfaces";
 import { useState, useEffect, useCallback } from "react";
 import { getUsersRequest, cancelSource } from "../../api";
 
