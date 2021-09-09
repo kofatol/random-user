@@ -1,4 +1,4 @@
-@import"./styles/index.scss";
+@import "./styles/index.scss";
 
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap");
 
@@ -8,7 +8,7 @@ body {
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  background-color: $blue;
+  background-color: $bg-color;
   font-family: "Mukta", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

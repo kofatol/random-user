@@ -2,12 +2,12 @@
 
 .CardBody {
   &__usersList {
-    background-color: $light-green;
+    background-color: $card-body-color;
     max-height: 600px;
     overflow-y: auto;
 
     li:not(:last-of-type) {
-      border-bottom: 1px solid $green;
+      border-bottom: 1px solid $card-items-border-color;
     }
   }
 }
