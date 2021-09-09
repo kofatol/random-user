@@ -5,8 +5,8 @@
 body {
   color: $black;
   display: flex;
-  overflow: hidden;
-  align-items: center;
+  overflow-y: hidden;
+  align-items: top;
   justify-content: center;
   background-color: $global-bg-color;
   font-family: "Mukta", sans-serif;
