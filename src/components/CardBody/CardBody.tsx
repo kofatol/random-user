@@ -1,14 +1,14 @@
-import useUsersData from "./CardBody.hook";
 import UserInfo from "../UserInfo/UserInfo";
+import { CardBodyProps } from "./CardBody.model";
 import CSS from "./CardBody.module.scss";
 
-const CardBody: React.FC = () => {
-  const usersData = useUsersData();
+const CardBody: React.FC<CardBodyProps> = (props) => {
+  const { users } = props;
 
   return (
     <div className={CSS.CardBody}>
       <ul id="result" className={CSS.CardBody__usersList}>
-        {usersData.map((user) => (
+        {users.map((user) => (
           <UserInfo userData={user} key={user.registered.date} />
         ))}
       </ul>
