@@ -15,6 +15,11 @@ instance.interceptors.request.use((config) => {
   return config;
 });
 
+instance.interceptors.response.use(
+  (response) => response,
+  (error) => console.error("Something went wrong:", error)
+);
+
 export function getUsersRequest() {
   return instance.get("?results=50");
 }
