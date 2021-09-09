@@ -33,7 +33,7 @@ const useUsersData = () => {
     return cancelSource?.cancel("Operation canceled by user.");
   }, [getUsersData]);
 
-  return { usersData, visibleUsers, onUsersSearch };
+  return { visibleUsers, onUsersSearch };
 };
 
 export default useUsersData;
