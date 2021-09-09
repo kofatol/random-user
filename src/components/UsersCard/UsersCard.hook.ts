@@ -6,16 +6,18 @@ const useUsersData = () => {
   const [usersData, setUsersData] = useState<User[]>([]);
   const [visibleUsers, setVisibleUsers] = useState<User[]>([]);
 
-  const onUsersSearch = (e: React.ChangeEvent<HTMLInputElement>) => filterData(e.target.value);
+  const onUsersSearch = (e: React.ChangeEvent<HTMLInputElement>) =>
+    filterData(e.target.value.trim());
 
   const filterData = (searchTerm: string) => {
     if (!searchTerm) {
       return setVisibleUsers(usersData);
     }
 
-    const matchedUsers: User[] = usersData.filter((user) =>
-      user.name.first.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const matchedUsers: User[] = usersData.filter((user) => {
+      const fullName = `${user.name.first.toLowerCase()} ${user.name.last.toLowerCase()}`;
+      return fullName.includes(searchTerm.toLowerCase());
+    });
 
     setVisibleUsers(matchedUsers);
   };
