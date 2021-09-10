@@ -1,8 +1,9 @@
 @import "../../styles/index.scss";
 
 .CardBody {
+  background-color: $card-body-color;
+
   &__usersList {
-    background-color: $card-body-color;
     max-height: 500px;
     overflow-y: auto;
 
