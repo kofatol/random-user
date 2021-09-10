@@ -1,0 +1,37 @@
+@import "../../styles/index.scss";
+
+.Spinner {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $card-body-color;
+
+  &__loader {
+    position: absolute;
+    box-sizing: border-box;
+    margin-top: -10px;
+    border-radius: 16px;
+    width: 80px;
+    height: 20px;
+    padding: 4px;
+    background: $spinner-bg-color;
+
+    &:before {
+      content: "";
+      position: absolute;
+      border-radius: 16px;
+      width: 20px;
+      height: 12px;
+      left: 0;
+      background: $spinner-color;
+      animation: push 1s infinite linear;
+    }
+  }
+}
+
+@keyframes push {
+  50% {
+    left: 56px;
+  }
+}
