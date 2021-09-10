@@ -1,0 +1,12 @@
+@import "../../styles/index.scss";
+
+.EmptyMessage {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__text {
+    @extend %global-text;
+  }
+}
