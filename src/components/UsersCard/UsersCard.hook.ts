@@ -5,6 +5,7 @@ import { getUsersRequest, cancelSource } from "../../api";
 const useUsersData = () => {
   const [usersData, setUsersData] = useState<User[]>([]);
   const [visibleUsers, setVisibleUsers] = useState<User[]>([]);
+  const [isLoading, setIsLoadingTo] = useState(false);
 
   const onUsersSearch = (e: React.ChangeEvent<HTMLInputElement>) =>
     filterData(e.target.value.trim());
@@ -23,11 +24,13 @@ const useUsersData = () => {
   };
 
   const getUsersData = useCallback(async () => {
+    setIsLoadingTo(true);
     const res = await getUsersRequest();
     const { results } = await res.data;
 
     setUsersData(results);
     setVisibleUsers(results);
+    setIsLoadingTo(false);
   }, []);
 
   useEffect(() => {
@@ -35,7 +38,7 @@ const useUsersData = () => {
     return cancelSource?.cancel("Operation canceled by user.");
   }, [getUsersData]);
 
-  return { visibleUsers, onUsersSearch };
+  return { visibleUsers, onUsersSearch, isLoading };
 };
 
 export default useUsersData;
