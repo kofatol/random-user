@@ -1,4 +1,5 @@
 import Spinner from "../Spinner";
+import EmptyMessage from "../EmptyMessage";
 import UserInfo from "../UserInfo/UserInfo";
 import { CardBodyProps } from "./CardBody.model";
 import CSS from "./CardBody.module.scss";
@@ -14,6 +15,7 @@ const CardBody: React.FC<CardBodyProps> = (props) => {
           <UserInfo userData={user} key={user.registered.date} />
         ))}
       </ul>
+      {!isLoading && !users.length && <EmptyMessage />}
     </div>
   );
 };
