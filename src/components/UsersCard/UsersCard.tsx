@@ -4,12 +4,12 @@ import useUsersData from "./UsersCard.hook";
 import CSS from "./UsersCard.module.scss";
 
 const UsersCard: React.FC = () => {
-  const { visibleUsers, onUsersSearch } = useUsersData();
+  const { visibleUsers, onUsersSearch, isLoading } = useUsersData();
 
   return (
     <div className={CSS.UsersCard}>
       <CardHeader onInputChange={onUsersSearch} />
-      <CardBody users={visibleUsers} />
+      <CardBody users={visibleUsers} isLoading={isLoading} />
     </div>
   );
 };
